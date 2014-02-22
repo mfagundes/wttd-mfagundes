@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south',
     'eventex.core',
     'eventex.subscriptions',
 )
@@ -69,9 +70,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-BR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -86,3 +87,8 @@ USE_TZ = True
 STATIC_ROOT = BASE_DIR.child('staticfiles')
 
 STATIC_URL = '/static/'
+
+# Usar o South para preparar o banco nos testes?
+# True: Sim (default)
+# False: nao (use o Syncdb)
+SOUTH_TESTS_MIGRATE = False
